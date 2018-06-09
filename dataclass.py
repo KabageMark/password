@@ -10,14 +10,18 @@ class Account:
 
 class Passwords:
     password_list = []
-    def _init_(self,password,email):
+    def _init_(self,password,email,credentialtype):
         self.password = password
         self.email = email
 
     def savepassword(self):
-        Passwords.password_list.append(self)          
+        Passwords.password_list.append(self)
+
+    # @classmethod
+    # def find_by_credential(cls,credential):
+    #     for Passwords in cls.password_list:
+    #             if password.credentialtype == credential2:
+    #                 return password_list                  
   
     
 
-# class  crededntial:
-#     name,password    
