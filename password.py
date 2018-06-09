@@ -3,11 +3,16 @@ from dataclass import Passwords
 def ceateaccount(firstname,lastname,email):
     new_account = Account(firstname,lastname,email)
     return new_account
+def saveaccount(account):
+     account.save_contact()    
     
 
-def createcredential(password,email):
-    new_account2 = Passwords(password,email)
+def createcredential(credentialname,password,email):
+    new_account2 = Passwords(credentialname,password,email)
     return new_account2
+
+def getcredential(credentialname):
+    return credentialname
 
 def main():
     print("Hello Welcome to your password list. What is your name?")
@@ -34,10 +39,26 @@ def main():
                             print("email ...")
                             email = input()
 
-                            new_account(Account(firstname,lastname,email)) # create and save new contact.
+                            saveaccount(Account(firstname,lastname,email)) # create and save new contact.
                             print ('\n')
                             print(f"New Contact {firstname} {lastname} created")
                             print ('\n')
+                    
+                    elif short_code == 'fp':
+
+                            print("Enter the crdential you want to search for")
+
+                            search_credential = input()
+                            if getcredential(credentialname):
+                                    search_credential = getcredential(credentialname)
+                                    print(f"{search_credential.credentialname} {search_credential.password}")
+                                    print('-' * 20)
+
+                                    print(f"Credential.......{search_credential.phone_number}")
+                                    print(f"password.......{search_credential.email}")
+                            else:
+                                    print("That credential does not exist")
+
 
 
 
@@ -46,6 +67,8 @@ def main():
 if __name__ == '__main__':
 
     main()
+
+    
                             
 
 
