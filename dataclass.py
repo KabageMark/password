@@ -1,6 +1,6 @@
 class Account:
     account_list = []
-    def _init_(self,firstname,lastname,email):
+    def __init__(self,firstname,lastname,email):
         self.firstname = firstname
         self.lastname = lastname
         self.email = email
@@ -10,7 +10,7 @@ class Account:
 
 class Passwords:
     password_list = []
-    def _init_(self,password,email,credentialtype):
+    def __init__(self,password,email,credentialtype):
         self.password = password
         self.email = email
 

@@ -1,11 +1,11 @@
 from dataclass import Account
 from dataclass import Passwords
-def ceateaccount(firstname,lastname,email):
+def createaccount(firstname,lastname,email):
     new_account = Account(firstname,lastname,email)
     return new_account
 def saveaccount(account):
-     account.save_contact()    
-    
+     account.saveaccount()    
+
 
 def createcredential(credentialname,password,email):
     new_account2 = Passwords(credentialname,password,email)
@@ -39,7 +39,7 @@ def main():
                             print("email ...")
                             email = input()
 
-                            saveaccount(Account(firstname,lastname,email)) # create and save new contact.
+                            saveaccount(createaccount(firstname,lastname,email)) 
                             print ('\n')
                             print(f"New Contact {firstname} {lastname} created")
                             print ('\n')
@@ -58,7 +58,10 @@ def main():
                                     print(f"password.......{search_credential.email}")
                             else:
                                     print("That credential does not exist")
-
+                    
+                    elif short_code == "ex":
+                            print("Bye .......")
+                            break
 
 
 
