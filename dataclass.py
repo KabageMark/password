@@ -17,11 +17,11 @@ class Passwords:
     def savepassword(self):
         Passwords.password_list.append(self)
 
-    # @classmethod
-    # def find_by_credential(cls,credential):
-    #     for Passwords in cls.password_list:
-    #             if password.credentialtype == credential2:
-    #                 return password_list                  
+    @classmethod
+    def find_by_credential(cls,credential):
+        for Passwords in cls.password_list:
+                if Passwords.credentialtype == credential:
+                    return credential                  
   
     
 

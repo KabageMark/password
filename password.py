@@ -1,18 +1,19 @@
 from dataclass import Account
 from dataclass import Passwords
+
 def createaccount(firstname,lastname,email):
     new_account = Account(firstname,lastname,email)
     return new_account
+
 def saveaccount(account):
      account.saveaccount()    
-
 
 def createcredential(credentialname,password,email):
     new_account2 = Passwords(credentialname,password,email)
     return new_account2
 
 def getcredential(credentialname):
-    return credentialname
+    return Passwords.find_by_credential(credentialname)
 
 def main():
     print("Hello Welcome to your password list. What is your name?")
@@ -49,9 +50,9 @@ def main():
                             print("Enter the crdential you want to search for")
 
                             search_credential = input()
-                            if getcredential(credentialname):
-                                    search_credential = getcredential(credentialname)
-                                    print(f"{search_credential.credentialname} {search_credential.password}")
+                            if getcredential(search_credential):
+                                    check_existing_credential = getcredential(search_credential)
+                                    print(f"{check_existing_credential.credentialname} {check_existing_credential.password}")
                                     print('-' * 20)
 
                                     print(f"Credential.......{search_credential.phone_number}")
