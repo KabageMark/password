@@ -12,6 +12,9 @@ def createcredential(credentialname,password,email):
     new_account2 = Passwords(credentialname,password,email)
     return new_account2
 
+def savecredential(password):
+     password.savepassword()     
+
 def getcredential(credentialname):
     return Passwords.find_by_credential(credentialname)
 
@@ -23,7 +26,7 @@ def main():
     print('\n')
 
     while True:
-                    print("Use these short codes : cc - create a new account,  fp -find a password, ex -exit the contact list ")
+                    print("Use these short codes : cc - create a new account, cr - create credential, fp -find a password, ex -exit the contact list ")
 
                     short_code = input().lower()
 
@@ -63,7 +66,25 @@ def main():
                     elif short_code == "ex":
                             print("Bye .......")
                             break
+                    
 
+                    elif short_code == 'cr':
+                            print("New credential")
+                            print("-"*10)
+
+                            print ("Firstname ....")
+                            credentialname = input()
+
+                            print("Last name ...")
+                            password = input()
+
+                            print("email ...")
+                            email = input()
+
+                            savecredential(createcredential(credentialname,password,email)) 
+                            print ('\n')
+                            print(f"New Contact {credentialname} {password} created")
+                            print ('\n')
 
 
 
