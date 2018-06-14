@@ -1,17 +1,17 @@
-#Project Title#
+# Project Title #
 
 Password Locker
 
-#Getting Started#
+# Getting Started 
 
 Clone the repositories
 run it with the terminal
 
-#Prerequisites
+# Prerequisites
 
 cloning the repositories only
 
-#Give examples
+# Give examples
 Installing
 
 A step by step series of examples that tell you how to get a development env running
@@ -24,12 +24,12 @@ And repeat
 until finished
 End with an example of getting some data out of the system or using it for a little demo
 
-#Running the tests
+# Running the tests
 
 run the code python3.6 run.py
 choose any of the short-codes for any given activity that you want  
 
-#Built With
+# Built With
 
 Python-flask framework
 
@@ -43,9 +43,9 @@ Authors
 
 Kabage Mark Chege
 
-#License#
+# License
 
 This project is licensed under the MIT License 
 
-#Acknowledgments#
+# Acknowledgments 
 
