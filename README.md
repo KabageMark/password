@@ -6,6 +6,7 @@ Password Locker
 
 Clone the repositories
 run it with the terminal
+use the command **passowrd3.6 run.py**
 
 # Prerequisites
 
@@ -26,7 +27,7 @@ End with an example of getting some data out of the system or using it for a lit
 
 # Running the tests
 
-run the code python3.6 run.py
+**run the code python3.6 run.py**
 choose any of the short-codes for any given activity that you want  
 
 # Built With
