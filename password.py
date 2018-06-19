@@ -26,7 +26,7 @@ def main():
     print('\n')
 
     while True:
-                    print("Use these short codes : cc - create a new account, cr - create credential, fp -find a password, ex -exit the contact list ")
+                    print("Use these short codes : lg - log in account, cr - create credential, fp -find a password, ex -exit the contact list ")
 
                     short_code = input().lower()
 
@@ -45,7 +45,7 @@ def main():
 
                             saveaccount(createaccount(firstname,lastname,email)) 
                             print ('\n')
-                            print(f"New Contact {firstname} {lastname} created")
+                            print(f"logged in as {firstname} {lastname}")
                             print ('\n')
                     
                     elif short_code == 'fp':
