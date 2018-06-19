@@ -26,12 +26,12 @@ def main():
     print('\n')
 
     while True:
-                    print("Use these short codes : lg - log in account, cr - create credential, fp -find a password, ex -exit the contact list ")
+                    print("Use these short codes : lg - log in account, cr - create credential, fp -find a password, ex -log out")
 
                     short_code = input().lower()
 
-                    if short_code == 'cc':
-                            print("New account")
+                    if short_code == 'lg':
+                            print("Log in")
                             print("-"*10)
 
                             print ("Firstname ....")
@@ -64,7 +64,7 @@ def main():
                                     print("That credential does not exist")
                     
                     elif short_code == "ex":
-                            print("Bye .......")
+                            print("You are now logged out .......")
                             break
                     
 
@@ -72,10 +72,10 @@ def main():
                             print("New credential")
                             print("-"*10)
 
-                            print ("Firstname ....")
+                            print ("Account name ....")
                             credentialname = input()
 
-                            print("Last name ...")
+                            print("Password ...")
                             password = input()
 
                             print("email ...")
